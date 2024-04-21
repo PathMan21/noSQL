@@ -25,13 +25,19 @@
 2/ **Importer du json** : on insère avec la ligne de commande : mongoimport --db test --collection users --file data.json 
 3/ **CRUD** Je n'ai pas réussis à éxecuter toutes les opérations CRUD mais voici celles que j'ai réussis :
 
-**Pour insérer** on va utiliser : db.users.insertMany() ou insertOne() par exemple : db.users.insertOne({ "name": "John Doe", "age": 35, "email": "john@example.com", "createdAt": new Date() })
-ou db.users.insertMany([
+**Pour insérer** :
+on va utiliser : db.users.insertMany() ou insertOne() par exemple : db.users.insertOne({ "name": "John Doe", "age": 35, "email": "john@example.com", "createdAt": new Date() })
+ou 
+
+db.users.insertMany([
   { "name": "Jane Smith", "age": 28, "email": "jane@example.com", "createdAt": new Date() },
   { "name": "Alice Johnson", "age": 42, "email": "alice@example.com", "createdAt": new Date() },
   { "name": "Bob Brown", "age": 50, "email": "bob@example.com", "createdAt": new Date() }
 ])
-**Delete aussi** : db .users.Delete One({ "nom": "John Doe";)
+
+**Delete aussi** : 
+db .users.Delete One({ "nom": "John Doe";)
+
 il faut lui spécifier un critère de sélection pour savoir lequel supprimer
 
 Toutes les opérations CRUD doivent avoir avec db.<le nom de la collection>.<l'opération CRUD>
