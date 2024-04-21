@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mongodb-primary:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-primary:/data/db
+    command: --replSet myReplicaSet
+
+  mongodb-secondary:
+    image: mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongodb-secondary:/data/db
+    command: --replSet myReplicaSet
+
+  mongodb-arbiter:
+    image: mongo
+    command: mongod --replSet myReplicaSet
