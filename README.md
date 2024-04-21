@@ -15,14 +15,19 @@
 ### Étape 2: Génération de Fausses données
 
 1/ **On initialise un nouveau projet js** : donc npm install, npm install faker pour générer des données fictives, ainsi qu'express pour gérer la connexion à mongodb et les routes.
+
 2/ **on lance mongodb en parallèle**
+
 3/ **Création du fichier qui servira à créer des utilisateurs et à se connecter** : J'ai créé un dossier generate avec index.js qui contient la connection au serveur mongodb à la database test, avec la collection users.
+
 4/ **On lance le script avec npm start** (qui a été mis sur index.js)
 
 ### Étape 3: Manipulations via la CLI MongoDB
 
 1/ **On se reconnecte à la CLI de mongodb**On va se reconnecter à la cli de mongodb avec "docker exec -it tpmangodbreplication-mongodb-primary-1 mongosh"
+
 2/ **Importer du json** : on insère avec la ligne de commande : mongoimport --db test --collection users --file data.json 
+
 3/ **CRUD** Je n'ai pas réussis à éxecuter toutes les opérations CRUD mais voici celles que j'ai réussis :
 
 **Pour insérer** :
